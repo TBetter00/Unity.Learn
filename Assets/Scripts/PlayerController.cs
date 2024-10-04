@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    #region Variable Declaration
     //TODO: Attributes
     public Animator _animator;
     public float _walkSpeed = 1f;
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _movementInput;
     private float _speed;
     private bool _isRunning = false;
+    #endregion
 
     #region Input System
     private InputSystem_Actions _input;
@@ -74,4 +76,14 @@ public class PlayerController : MonoBehaviour
             _animator.transform.forward = direction;
         }
     }
+    /// <summary>
+    /// Hello this is a function
+    /// </summary>
+    [ContextMenu("MyFunction"),Tooltip("This is just a funciton")]
+    public void Function(){
+        for(int i = 0;i < 5;i++){
+            print(i);
+        }
+    }
+    
 }
